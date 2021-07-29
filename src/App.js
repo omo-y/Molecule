@@ -1,5 +1,6 @@
 import { PrimaryBotton } from "./components/atoms/button/PrimaryBotton";
 import { SecondaryBotton } from "./components/atoms/button/SecondaryBotton";
+import { UserCard } from "./components/organisms/user/UserCard";
 import { SearchInput } from "./molecules/Searchinput";
 import "./styles.css";
 
@@ -11,6 +12,7 @@ export default function App() {
       <br />
       <br />
       <SearchInput />
+      <UserCard />
     </div>
   );
 }
