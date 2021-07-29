@@ -1,7 +1,13 @@
-export const UserCard = () => {
+import styled from "styled-components";
+export const UserCard = (props) => {
   return (
-    <div>
-      <img alt="画面" />
+    <SDL>
+      <img
+        height={120}
+        width={150}
+        src="https://source.unsplash.com/73pyV0JJOmE"
+        alt="画面"
+      />
 
       <p>名前</p>
       <dl>
@@ -14,6 +20,16 @@ export const UserCard = () => {
         <dt>webアドレス</dt>
         <dd>web: campany@bbb.com</dd>
       </dl>
-    </div>
+    </SDL>
   );
 };
+const SDL = styled.dl`
+text-align:left;
+dt {
+ float: left;
+}
+dd{
+  padding-left: 32px;
+  padding-bottom 8px;
+}
+`;
