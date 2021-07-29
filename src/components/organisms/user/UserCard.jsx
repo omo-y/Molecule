@@ -1,26 +1,23 @@
 import styled from "styled-components";
 export const UserCard = (props) => {
+  const { user } = props;
   return (
-    <SDL>
-      <img
-        height={120}
-        width={150}
-        src="https://source.unsplash.com/73pyV0JJOmE"
-        alt="画面"
-      />
-
-      <p>名前</p>
-      <dl>
-        <dt>メールアドレス</dt>
-        <dd>111@bbb.com</dd>
-        <dt>TEL</dt>
-        <dd>12345678</dd>
-        <dt>会社名</dt>
-        <dd>真黒(株)</dd>
-        <dt>webアドレス</dt>
-        <dd>web: campany@bbb.com</dd>
-      </dl>
-    </SDL>
+    <div>
+      <img height={120} width={150} src={user.image} alt={user.name} />
+      <SDL>
+        <p>{user.name}</p>
+        <dl>
+          <dt>email</dt>
+          <dd>{user.email}</dd>
+          <dt>TEL</dt>
+          <dd>{user.phone}</dd>
+          <dt>会社名</dt>
+          <dd>{user.company.name}</dd>
+          <dt>webアドレス</dt>
+          <dd>{user.website}</dd>
+        </dl>
+      </SDL>
+    </div>
   );
 };
 const SDL = styled.dl`
